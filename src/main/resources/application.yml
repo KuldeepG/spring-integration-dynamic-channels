@@ -1,0 +1,36 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:/Users/kuldeepghogre/study/personal/spring-integration-sample/greetings-app;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    platform: h2
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        show_sql: false
+        use_sql_comments: true
+        format_sql: true
+  h2:
+    console:
+      enabled: true
+      path: /console
+      settings:
+        trace: false
+        web-allow-others: true
+
+complex:
+  name: kuldeep
+  objects:
+    - name: a
+      value: b
+    -
+      name: a1
+      value: b1
+  locations:
+    - a: b
+    - b: c
+    - c: d
